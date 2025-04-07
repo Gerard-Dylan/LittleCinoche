@@ -1,35 +1,86 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import CardList from './components/CardList'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+
+export type MovieList = {
+  id: number,
+  title: string,
+  genre: "Science-Fiction" | "Comédie",
+  image: string,
+  synopsis: string,
+}
+
+const MoviesList: MovieList[] = [
+  {
+    id: 1,
+    title: "",
+    genre: "Science-Fiction",
+    image: "",
+    synopsis: "",
+  },
+  {
+    id: 2,
+    title: "",
+    genre: "Science-Fiction",
+    image: "",
+    synopsis: "",
+  },  
+  {
+    id: 3,
+    title: "",
+    genre: "Science-Fiction",
+    image: "",
+    synopsis: "",
+  },
+  {
+    id: 4,
+    title: "",
+    genre: "Comédie",
+    image: "",
+    synopsis: "",
+  },
+  {
+    id: 5,
+    title: "",
+    genre: "Comédie",
+    image: "",
+    synopsis: "",
+  },
+  {
+    id: 6,
+    title: "",
+    genre: "Comédie",
+    image: "",
+    synopsis: "",
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+  const [filter, setFilter] = useState<string>("all");
+  const [favorites, setFavorites] = useState<number[]>([]);
+  const filteredMovies = MoviesList.filter(movie => {
+      if (filter === "all") return true;
+      if (filter === "favoris") return favorites.includes(movie.id);
+      return movie.genre === filter;
+  });
+  const toggleFavorite = (id: number) => {
+      setFavorites((prev) =>
+      prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]);
+  };
+  
+  
+    return (
+      <>
+          <NavBar setFilter={setFilter}/>
+          <CardList movies={filteredMovies}
+          favorites={favorites}
+          toggleFavorite={toggleFavorite}
+          />
+          <Footer />
+      </>
+    )
+  }
 
 export default App
