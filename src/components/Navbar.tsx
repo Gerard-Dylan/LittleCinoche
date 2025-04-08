@@ -7,7 +7,7 @@ type NavbarProps = {
 function Navbar({ setFilter}: NavbarProps) {
 
     return (
-      <nav>
+      <nav className="Nav">
           <button onClick={() => setFilter("all")}>LittleCinoche</button>
           <button onClick={() => setFilter("Science-Fiction")}>Science-Fiction</button>
           <button onClick={() => setFilter("Comédie")}>Comédie</button>
