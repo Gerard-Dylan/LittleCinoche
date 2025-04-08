@@ -6,7 +6,9 @@
   color: white;
 }
 
-.Nav{
+.Nav {
+  background-image: url("./Images/NavBar.png");
+  background-size: cover;
   padding: 5rem;
   display: flex;
   justify-content: space-around;
