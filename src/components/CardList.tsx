@@ -1,6 +1,7 @@
 import type { MovieList } from "../App";
 import Card from "./Card";
 
+
 type CardListProps = {
     movies: MovieList[];
     favorites: number[];

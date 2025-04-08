@@ -1,5 +1,6 @@
 import { MovieList } from "../App";
 
+
 type CardProps = {
     movie: MovieList;
     isFavorite: boolean;
@@ -8,15 +9,15 @@ type CardProps = {
 
 function Card({ movie, isFavorite, toggleFavorite }: CardProps) {
     return (
-        <>
-            <img src={movie.image} alt={movie.title} />
+        <div>
             <h1>{movie.title}</h1>
-            <p>{movie.genre}</p>
+            <img src={movie.image} alt={movie.title} />
+            <h2>{movie.genre}</h2>
             <p>{movie.synopsis}</p>
             <button onClick={() => toggleFavorite(movie.id)}>
                 {isFavorite ? "❤️" : "🤍"}
             </button>
-        </>
+        </div>
     );
 }
 
