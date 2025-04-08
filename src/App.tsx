@@ -28,13 +28,14 @@ const MoviesList: MovieList[] = [
     genre: "Science-Fiction",
     image: "./Images/Neon.Exodus.jpg",
     synopsis: "Un groupe de survivants s’échoue sur une planète inhospitalière. Leur mission : bâtir la dernière colonie humaine… ou disparaître à jamais et vivre dans la disgrace.",
+
   },  
   {
     id: 3,
     title: "The Last Colony",
     genre: "Science-Fiction",
     image: "./Images/The.Last.Colony.jpg",
-    synopsis: "Dans une cité futuriste gouvernée par l’IA, une hackeuse tente de s’échapper avec la vérité. Mais le système ne laisse jamais personne sortir vivant. Son combat contre la technologie ne la laissera pas sans sequelles ; elle devra .",
+    synopsis: "Dans une cité futuriste gouvernée par l’IA, une hackeuse tente de s’échapper avec la vérité. Mais le système ne laisse jamais personne sortir vivant. Son combat contre la technologie ne la laissera pas sans sequelles ; elle devra se dépasser pour accomplir son destin.",
   },
   {
     id: 4,
@@ -48,7 +49,7 @@ const MoviesList: MovieList[] = [
     title: "Papa fait sa star",
     genre: "Comédie",
     image: "./Images/Papa.Fait.Sa.Star.jpg",
-    synopsis: "Gérard, papa divorcé, décide de devenir influenceur pour reconquérir sa jeunesse… et sa fille ado. Il enchaîne tutos ridicules, défis ratés, et placements de produits douteux. Internet ne l’attendait pas. Et sa fille non plus.",
+    synopsis: "Gérard, papa divorcé, décide de devenir influenceur pour reconquérir sa jeunesse… et sa fille ado. Il enchaîne tutos ridicules, défis ratés, et placements de produits douteux. Internet ne l’attendait pas. Sa fille non plus, le monde encore moins.",
   },
   {
     id: 6,
