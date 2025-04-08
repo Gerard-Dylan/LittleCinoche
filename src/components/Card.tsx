@@ -9,14 +9,14 @@ type CardProps = {
 
 function Card ({movie, isFavorite, toggleFavorite} : CardProps) {
     return (
-        <>
-    <img src={movie.image} alt={movie.title} />
+        <div>
     <h1>{movie.title}</h1>
-    <p>{movie.genre}</p>
+    <img className="Image" src={movie.image} alt={movie.title} />
+    <h2>{movie.genre}</h2>
     <p>{movie.synopsis}</p>
-    <button onClick={() => toggleFavorite(movie.id)}>{isFavorite ? "❤️" : "🤍"}</button>
-        </>
-    );
+    <button className="buttonCard" onClick={() => toggleFavorite(movie.id)}>{isFavorite ? "❤️" : "🤍"}</button>
+        </div>
+    )
 
 
 }

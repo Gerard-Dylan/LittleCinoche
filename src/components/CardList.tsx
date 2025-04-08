@@ -10,7 +10,7 @@ type CardListProps = {
 
 function CardList({movies, favorites, toggleFavorite} : CardListProps) {
     return (
-        <div>
+        <div className="card-grid">
             {movies.map((movie) => (
             <Card
             key={movie.id} 
@@ -18,7 +18,7 @@ function CardList({movies, favorites, toggleFavorite} : CardListProps) {
             isFavorite={favorites.includes(movie.id)}
             toggleFavorite={toggleFavorite}
             />
-            ))};  
+            ))}  
         </div>)
     };
 
